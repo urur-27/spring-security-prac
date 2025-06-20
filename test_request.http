@@ -1,0 +1,39 @@
+### GET public info
+GET http://localhost:8080/api/public/info
+
+### GET user board info (no auth)
+GET http://localhost:8080/api/board
+
+### GET user board info
+GET http://localhost:8080/api/board
+Authorization: Basic ZW1wbG95ZWU6MTIzNA==
+
+### POST board (no auth)
+POST http://localhost:8080/api/board
+Content-Type: application/json
+
+{
+  "title": "New Board",
+  "content": "This is a new board created via API."
+}
+
+### POST board
+POST http://localhost:8080/api/board
+Content-Type: application/json
+Authorization: Basic ZW1wbG95ZWU6MTIzNA==
+
+{
+  "title": "New Board",
+  "content": "This is a new board created via API."
+}
+
+### GET users (no auth)
+GET http://localhost:8080/api/admin/users
+
+### GET users (no admin)
+GET http://localhost:8080/api/admin/users
+Authorization: Basic ZW1wbG95ZWU6MTIzNA==
+
+### GET users (no admin)
+GET http://localhost:8080/api/admin/users
+Authorization: Basic YWRtaW46YWRtaW4=
